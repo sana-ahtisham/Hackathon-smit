@@ -720,7 +720,7 @@ label {
     border-top-right-radius: 30px;
   }
  /* end newsletter section */
- 
+
 .carousel-container {
   position: relative;
   width: 300px;
@@ -731,6 +731,7 @@ label {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+/*  
 
 .product-card {
   flex: 0 0 300px;
@@ -754,7 +755,7 @@ label {
 .product-card p {
   font-weight: bold;
   color: #007bff;
-}
+} */
 
 .carousel-button {
   position: absolute;
