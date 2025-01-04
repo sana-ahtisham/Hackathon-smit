@@ -1,0 +1,667 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  border-bottom: 1px solid #fbf6f6;
+}
+
+.nav {
+  gap: 15px;
+}
+
+.nav-link {
+  color: #333;
+}
+.nav-link:active {
+  color: #fa2cb0;
+}
+
+.nav-link:hover {
+  color: #fa2cb0;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  height: 200px;
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+  font-weight: bold;
+}
+.message-btn1 {
+    background-color: #fa2cb0;
+
+}
+/* For smaller screens, show the menu icon */
+@media (max-width: 599px) {
+  .logo {
+    flex: 1;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .d-lg-none {
+    display: inline-block;
+  }
+
+  .offcanvas-body ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .offcanvas-body .nav-item {
+    padding: 10px 0;
+  }
+}
+
+/* start new curve line==== */
+/* Banner Section */
+.banner-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  position: relative;
+}
+
+.text-content {
+  flex: 1; /* Allow text to grow or shrink as needed */
+  margin-right: 20px; /* Add spacing between text and image */
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-content h1 .highlight-black {
+  color: #161616;
+  font-weight: 900;
+}
+.text-content h1 .highlight-pink {
+  color: #fa2cb0;
+  font-weight: 900;
+}
+.hightlight-blue{
+    color: #60b3d1;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: #7d7676;
+}
+
+.image-content {
+  flex: 1; /* Allow image to grow or shrink as needed */
+  text-align: center; /* Center image */
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Wave Background */
+/* .banner-section::after {
+  content: "";
+  background: url("Assets/cds_450_v2-1.png") no-repeat center bottom;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+} */
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .banner-section {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center;
+  }
+
+  .text-content {
+    margin-right: 0; /* Remove margin when stacked */
+    margin-bottom: 20px; /* Add spacing below text */
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  .image-content img {
+    width: 90%; /* Adjust image size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .text-content p {
+    font-size: 0.8rem;
+  }
+
+  .image-content img {
+    width: 80%; /* Scale image further for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.75rem;
+  }
+
+  .image-content img {
+    width: 100%; /* Make image full width for small devices */
+  }
+}
+
+@keyframes hide-scroll {
+  0%,
+  to {
+    overflow: hidden;
+  }
+}
+
+.elementor-animation-shrink {
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.elementor-animation-shrink:active,
+.elementor-animation-shrink:focus,
+.elementor-animation-shrink:hover {
+  transform: scale(0.9);
+}
+/* end banner= */
+/* start new curve line==== */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+.curve {
+  background-color: #f7f7f7;
+}
+
+.curve .elementor-shape {
+  overflow: hidden;
+  /* position: absolute; */
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+}
+
+.curve .elementor-shape-top {
+  top: -1px;
+}
+
+.curve.elementor-shape-top:not([data-negative="false"]) svg {
+  z-index: -1;
+}
+
+.curve .elementor-shape-bottom {
+  bottom: -1px;
+}
+
+.curve .elementor-shape-bottom:not([data-negative="true"]) svg {
+  z-index: -1;
+}
+
+.curve .elementor-shape[data-negative="false"].elementor-shape-bottom,
+.elementor-shape[data-negative="true"].elementor-shape-top {
+  transform: rotate(180deg);
+}
+
+.curve .elementor-shape svg {
+  display: block;
+  width: calc(100% + 1px);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* cloud changed color */
+.curve .elementor-shape .elementor-shape-fill {
+  fill: #d96eb2;
+  transform-origin: center;
+  transform: rotateY(0deg);
+}
+.curve .elementor-shape .elementor-shape-fill1 {
+  fill: #d5d0d0;
+  transform-origin: center;
+  transform: rotateY(0deg);
+}
+.curve .elementor-shape .elementor-shape-fill2 {
+  fill: #fa2cae7c;
+  transform-origin: center;
+  transform: rotateY(0deg);
+  z-index: -1000;
+}
+/* end new curve line==== */
+/* start scientist section */
+.professor-img {
+  width: 50%;
+}
+.professor-row {
+  width: 100%;
+  gap: 10px;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section-content {
+  width: 40%;
+}
+.section-content p {
+  font-size: 14px;
+  color: gray;
+  line-height: 1.5;
+}
+.section-content button {
+  background-color: rgb(0, 106, 155);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 14px;
+}
+
+.box {
+  width: 200px;
+  border: 1px dashed rgb(40, 96, 120);
+  color: rgb(40, 96, 120);
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+  .box {
+    width: 100%;
+  }
+  .professor-row {
+    flex-direction: column-reverse !important;
+  }
+  .section-content {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+/* end scientist section */
+/* start why work  section */ /* Wave Background */
+.why-it-works {
+  position: relative;
+  padding: 60px 20px;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("Assets/wave.svg") no-repeat center top;
+  background-size: cover;
+  z-index: 1;
+}
+
+.text-content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.text-content h1 span {
+  color: #fa2cb0;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Hexagonal Grid */
+/* .hexagonal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .hex {
+    width: 100%;
+    aspect-ratio: 1 / 1.15;
+    background: #ffffff;
+    border: 2px solid #ccc;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s;
+  } */
+
+.hex:hover {
+  transform: scale(1.1);
+}
+
+.hex img {
+  width: 60%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.hex p {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hexagonal-grid {
+    gap: 10px;
+  }
+
+  .hex {
+    width: 90%;
+  }
+}
+/* end why work  section */
+
+/* start curve line forproduct section */
+
+.curve .elementor-shape .elementor-shape-fill3 {
+  fill: #60b3d1;
+  transform-origin: center;
+  transform: rotateY(0deg);
+}
+.curve .elementor-shape .elementor-shape-fill1 {
+  fill: #d5d0d0;
+  transform-origin: center;
+  transform: rotateY(0deg);
+}
+.curve .elementor-shape .elementor-shape-fill4 {
+  fill: #60b3d1d8;
+  transform-origin: center;
+  transform: rotateY(0deg);
+}
+/* end curve line forproduct section */
+/* Product Section */
+.product-section {
+  padding: 50px 20px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.product-section .section-title {
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.product-section .section-description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.product-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-arrow {
+  background-color: #60b3d1;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  position: absolute;
+  left: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 10px;
+}
+
+.product-cards {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.product-card {
+  background: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 0 0 300px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 250px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 900;
+}
+
+.product-card h3 span {
+  display: block;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.shop-now {
+  background-color: transparent;
+  color: grey;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.shop-now:hover {
+  background-color: #60b3d1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .product-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .product-card {
+    flex: 0 0 80%;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .product-section .section-description {
+    font-size: 0.9rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.8rem;
+  }
+  /* General Button Styling */
+  .shop-now {
+    background-color: transparent; /* Transparent background */
+    color: #4a4a4a; /* Dark gray text color */
+    border: 2px solid #4a4a4a; /* Border matching text color */
+    padding: 10px 30px; /* Padding for size */
+    font-size: 1rem; /* Standard text size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Capitalized text */
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer; /* Pointer on hover */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+
+  /* Hover Effect */
+  .shop-now:hover {
+    background-color: #4a4a4a; /* Dark gray background */
+    color: #fff; /* White text */
+    border-color: #4a4a4a; /* Border matches background */
+    transform: scale(1.05); /* Slightly larger on hover */
+  }
+
+  /* Focus Effect (for keyboard users) */
+  .shop-now:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px #4a4a4a; /* Add subtle focus ring */
+  }
+  .image-container {
+    width: 100%; /* Full-width container */
+    max-width: 300px; /* Optional: Limit maximum width */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Align content inside */
+  }
+}
+/*start  FAQ Section */
+
+/* faq */
+.faq-section p{
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 5
+}
+/*end  FAQ Section */
+
+ /* start newsletter section */
+ .newsletter-section{
+    background-color: dadada;
+    border-radius: 8px;
+ }
+
+label {
+    font-weight: bold;
+  }
+  
+  .message-btn {
+    background-color: #60b3d1;
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background-color:#dadada
+    ;
+  }
+  .back-color{
+    z-index: -1000;
+    height: 50px;
+    background-color: #60b3d1;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+ /* end newsletter section */
+
